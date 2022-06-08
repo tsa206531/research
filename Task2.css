@@ -1,0 +1,773 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*功能: 圖片會跟著框內寬度伸縮。*/
+img{
+max-width: 100%
+
+}
+/*功能: 計算時，算術比較方便*/
+*,*::before,*::after{
+ box-sizing: border-box;
+ height: auto;
+}
+/*從這裡開始*/
+
+/* 重複設定區 -------------*/
+.button{
+	width: 128px;
+	height: 40px;
+		
+	border-radius: 22px;
+	color: aliceblue;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: #FF5D50 0% 0% no-repeat padding-box;
+}
+/* 重複設定區---------------------- */
+
+.back01{
+	margin: auto;
+	max-width: 1366px;
+	height: 2000px;
+    
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home.svg),url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg);
+
+    background-position: right top,-150px 600px;
+    background-repeat:no-repeat,no-repeat;
+}
+
+.white-paper{
+
+margin: auto;
+max-width: 1366px;
+height: 2500px;
+
+}
+/* --------------- */
+
+.logomenu{
+	
+	max-width: 1366px;
+	height: 88px;
+
+	display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+	align-items: center;
+	flex-wrap: nowrap;
+	}
+
+.logomenu-logo{
+	
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true);
+    background-repeat:no-repeat;
+    background-size: contain;
+    width: 218px;
+    height: 40px;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+}
+
+.logomenu-menu{
+
+	background: #FF5D50 0% 0% no-repeat padding-box;
+}
+
+
+@media(max-width:767px){
+	.logomenu{
+		border-bottom: 3px solid rgb(255, 230, 0);
+		position:fixed;
+		top:0%;
+		right:0%;
+		left: 0%;
+		bottom: 0%;
+		background-color: #ffffff;
+		height: 10%;
+		z-index:50;
+	}
+}
+
+@media(max-width:578px){
+	.logomenu{
+		flex-wrap: wrap;
+	}
+}
+
+/* ------------------------------- */
+.bigimg-out{
+
+    max-width: 1085px;
+    margin:auto;
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bigimg-lift-txtout{
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 141px;
+	
+}
+
+.txt-h2{
+	text-align: left;
+	font: normal normal bold 18px/26px Noto Sans TC;
+   letter-spacing: 0px;
+   color: #56C4C5;
+   opacity: 1;
+}
+
+.txt-h1{
+	text-align: left;
+    letter-spacing: 0px;
+    color: #221E1F;
+    opacity: 1;
+    font: normal normal bold 48px/70px Noto Sans TC;
+}
+
+.txt-h4{
+	text-align: left;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	font: normal normal normal 20px/29px Noto Sans TC;
+}
+
+.bigimg-right{
+
+    width:500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.bigimg-right img{
+	max-width: 100%;
+}
+
+
+@media(max-width:1073px){
+	.bigimg-out{
+		flex-direction: column;
+		justify-content :center;
+		align-items: center;
+		flex-wrap: nowrap;
+		align-content: stretch;		
+	}
+	.bigimg-lift-txtout{
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding-left: 0px;
+		
+	}
+	.txt-h2{
+		margin-top: 18px;
+		margin-bottom :8px;
+	}
+
+	.txt-h4{
+		margin-top: 16px;
+		margin-bottom :8px;
+	}
+
+		
+	
+}
+
+@media(max-width:578px){
+	.bigimg-right{
+	width: 304px;
+    height: 302px;
+	}
+		
+	.txt-h2{
+		text-align: left;
+	font: normal normal bold 16px/24px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #56C4C5;
+	opacity: 1;
+	}
+	.txt-h1{
+		text-align: left;
+		font: normal normal bold 32px/46px Noto Sans TC;
+		letter-spacing: 0px;
+		color: #221E1F;
+		opacity: 1;
+	}
+	.txt-h4{
+		text-align: left;
+	font: normal normal normal 16px/24px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	}
+}
+/* ----------------------------- */
+.sloge-H1{
+	
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+	text-align: center;
+    font: normal normal bold 32px/46px Noto Sans TC;
+    letter-spacing: 0px;
+    color: #221E1F;
+    
+	margin-top:100px;
+	margin-bottom:  48px;
+}
+/* ----------------------- */
+.FB-LINE-IG{
+
+	margin:auto;
+	max-width: 969px;
+	
+
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+	
+}
+.FB-picg{
+
+	width: 244px;
+	
+	margin-bottom: 52px;	
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+.FBimg{
+width: 90px;
+height: 90px;
+
+
+}
+
+.FB-H2{
+	text-align: center;
+	font: normal normal bold 24px/35px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	margin: 24px 0px;
+}
+
+.FB-H4{
+	text-align: center;
+	font: normal normal normal 16px/24px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #747474;
+	opacity: 1;
+}
+
+@media(max-width:767px){
+	.FBimg{
+		margin-top: 32px;
+	}
+	.FB-picg{
+		width: 70%;
+	}
+}
+
+
+@media(max-width:578px){
+	
+}
+
+.sloge-out{
+
+	display: flex;
+	flex-direction: column;
+    justify-content :center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sloge-TXT021{
+	text-align: center;
+	font: normal normal bold 32px/46px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+}
+
+.sloge-TXT022{
+	text-align: center;
+	font: normal normal normal 20px/29px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+}
+
+.middpicture{
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content :center;
+    align-items: center;
+	flex-wrap: wrap;
+
+    margin-top: 48px;
+    margin-left: 139;
+    margin-right: 139;
+}
+
+
+.pic4{
+
+	width: 260px;
+	height: 388px;
+   
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	
+	border-radius: 12px;
+	opacity: 1;
+	margin: 16px;
+	
+   
+   }
+
+.big-left-txt1{
+color: #56C4C5;
+font: normal normal bold 16px/24px Noto Sans TC;
+}
+
+   .pci4-h2{
+	   text-align: center;
+	   margin: 16px;
+   
+   }
+   
+   .pci4-h3{
+   text-align: center;
+   font: normal normal normal 16px/24px Noto Sans TC;
+   letter-spacing: 0px;
+   color: #221E1F;
+   opacity: 1;
+   }
+
+   @media(max-width:955px){
+.pic4 {
+	width: 30%;
+	height: auto;
+}
+}
+
+
+@media(max-width:579px){
+.pic4{
+	  	width: 45%;
+	}
+.pci4-h3{
+		margin-bottom: 10px;
+	}
+}
+/* --------------------------------- */
+
+
+.mid-butten{
+
+    margin:100px 139px;
+    max-width: 1039px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	flex-wrap:wrap-reverse;
+}
+
+
+
+.mid-but-left{
+    max-width: 507px;
+    height: auto;
+ 
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content :space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-right: 80px;
+}
+.midpack{
+max-width: 230px;
+height: 280px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 10px #00000014;
+border-radius: 12px;
+opacity: 1;
+
+padding:32px;
+margin-bottom:28px; 
+
+  
+}
+
+.imgoutpack{
+    display: flex;
+    flex-direction: row;
+    justify-content :center;
+    align-items: center;
+    max-width: 86px;
+    height: 86px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 2px 10px #00000014;
+opacity: 1;
+border-radius: 100px;
+
+}
+.mid-but-smallimg{
+    background: transparent url('img/target.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    
+}
+
+.midbut-left-h4{
+    text-align: left;
+font: normal normal bold 18px/26px Noto Sans TC;
+letter-spacing: 0px;
+color: #221E1F;
+opacity: 1;
+margin-top: 24px;
+}
+
+.midbut-left-h5{
+    text-align: left;
+    font: normal normal normal 16px/24px Noto Sans TC;
+    letter-spacing: 0px;
+    color: #221E1F;
+    opacity: 1;
+    margin:16px 16px 16px 0px;
+    }
+.mid-but-right{
+
+ 
+    max-width: 400px;
+    
+    
+}
+.but-right-h1{
+text-align: left;
+font: normal normal bold 32px/46px Noto Sans TC;
+letter-spacing: 0px;
+color: #221E1F;
+opacity: 1;
+}
+
+.but-right-h4{
+text-align: left;
+font: normal normal normal 18px/26px Noto Sans TC;
+letter-spacing: 0px;
+color: #221E1F;
+opacity: 1;
+margin-top: 16px;
+margin-bottom: 24px;
+
+}
+
+.but-right-bouuton{
+ width: 136px;
+height: 49px;
+margin-bottom: 32px ;
+color: rgb(255, 255, 255);
+
+background: #56C4C5 0% 0% no-repeat padding-box;
+border: 1px solid #56C4C5;
+border-radius: 27px;
+opacity: 1;
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+@media(max-width:1260px){
+	.mid-but-right{
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+    justify-content :center;
+    align-items: center;
+	}
+	.mid-butten{
+	margin:0 auto;
+	}
+
+	.but-right-h4{
+	 	text-align: center;
+		font: normal normal normal 16px/24px Noto Sans TC;
+	}
+
+	.but-right-h1{
+
+		text-align: center;
+		font: normal normal bold 28px/40px Noto Sans TC;
+	}
+	.midpack{margin-bottom:28px;}
+}
+@media(max-width:975px){
+	.mid-but-left{
+	margin:0 auto;
+	flex-direction: row;
+    justify-content :center;
+    align-items: center;
+    flex-wrap: wrap;}
+}
+
+@media(max-width:377px){
+	.mid-but-left{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	margin:0 auto;
+}
+}
+/* -----------好評如潮-------------- */
+
+.respond{
+	text-align: center;
+	font: normal normal bold 32px/46px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	margin-bottom: 48px;
+	}
+/* ---------------------------- */
+	.res-out-pick{
+		margin: 20px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		
+	
+	}
+
+	
+	.res-txt-outpick{
+
+		position: relative;
+		max-width: 352px;    
+		background: #ffffff 0% 0% no-repeat padding-box;
+		box-shadow: 0px 2px 10px #00000014;
+		border-radius: 12px;
+		opacity: 1;
+		padding: 25px;
+		margin-bottom: 30px ;
+	   
+	}
+
+	.resimg01 img{
+	position: absolute;
+	border-radius: 100%;
+	
+	width: 80px;
+	height: 80px;
+	background-size: cover;
+	top: -40px;
+	
+	
+	}
+	
+
+	
+	.res-txt1{
+		margin-top:48px;
+		
+		text-align: left;
+	font: normal normal normal 16px/24px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	
+	}
+	.segment{
+		border-bottom: 1px solid rgb(129, 129, 129) ;
+		margin: 25px 1px;
+	}
+	.res-txt2{
+	text-align: left;
+	font: normal normal bold 16px/24px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	margin-bottom :8px;
+	}
+	
+	.res-botton{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	.res-txt3{
+	text-align: left;
+	font: normal normal normal 16px/24px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content :center;
+	align-items: center;
+	
+	margin: 0 auto;
+	}
+
+	@media(max-width:1095px){
+		.res-txt-outpick{
+			margin-bottom: 80px ;
+		}
+
+	}
+
+/* ------------------------- */
+
+
+.end-back12{
+	
+	max-width: 1366px;
+	margin:auto;
+	 height: 503px;
+	 background-size: contain;
+	 background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg);
+	
+	 
+	 background-repeat: no-repeat;
+	 padding-top: 220px ;
+	
+	display: flex;
+	flex-direction:column;
+	justify-content :center;
+	align-items: center;
+	
+	}
+	
+	.end-h1{
+	text-align: center;
+	font: normal normal bold 32px/46px Noto Sans TC;
+	letter-spacing: 0px;
+	color: #221E1F;
+	opacity: 1;
+	}
+	.end-butten{
+	width: 136px;
+	height: 49px;
+	margin-top: 48px;
+	color: rgb(255, 255, 255);
+	
+	background: #56C4C5 0% 0% no-repeat padding-box;
+	border: 1px solid #56C4C5;
+	border-radius: 27px;
+	opacity: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content :center;
+	align-items: center;
+	}
+	
+	.END{
+	display: flex;
+	flex-direction: row;
+	justify-content :center;
+	align-items: center;
+	max-width: 1366px;
+	margin: auto;
+	height: 56px;
+	
+	background: #F5F5F5 0% 0% no-repeat padding-box;
+	opacity: 1;
+	}
+a{
+	color: #FFFFFF;
+	text-decoration:none;
+}
+
+/*重寫第三遍，相同東西先算好 可以模組化
+    position: relative; absolute; 圖層關西打錯
+    position:fixed; 固定圖層  上下左右要打0%
+    border-radius: 100%;  圖片圓角100%
+
+    背景圖可以加強繼續做。
+@media(max-width:1095px){
+     ------------*/
